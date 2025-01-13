@@ -1,0 +1,24 @@
+src/
+│
+├── controllers/
+│   └── authController.ts      # Handles HTTP requests (login, register)
+│
+├── entities/
+│   └── user.ts               # Mongoose User model (or any other domain models)
+│
+├── frameworks/
+│   ├── db.ts                 # MongoDB connection setup
+│   ├── auth.ts               # Authentication utility functions (JWT generation, password hashing)
+│
+├── interfaces/
+│   ├── IUser.ts              # User entity interface
+│   └── IAuthService.ts       # Interface for authentication services
+│
+├── services/
+│   ├── authService.ts        # Business logic for authentication (user registration, login)
+│   └── userService.ts        # Business logic for managing user data
+│
+├── usecases/
+│   └── authUseCase.ts        # Orchestrates the authentication process (calls authService)
+│
+└── app.ts                    # Entry point - Express app setup

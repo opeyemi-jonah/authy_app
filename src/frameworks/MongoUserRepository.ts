@@ -1,4 +1,3 @@
-// src/frameworks/MongoUserRepository.ts
 import { UserRepository } from "../interfaces/UserRepository";
 import { User } from "../entities/User";
 import { connectToMongoDB } from "./MongoDBClient"; // Import the connection function

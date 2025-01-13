@@ -1,0 +1,7 @@
+Controllers
+Controllers handle HTTP requests and responses. They're responsible for interacting with the services and returning the results.
+
+authController.ts
+Keep the logic minimal and delegate complex operations to the service layer.
+Ensure proper error handling and response formatting.
+

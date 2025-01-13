@@ -1,4 +1,3 @@
-// src/interfaces/AuthService.ts
 import { User } from "../entities/User";
 
 export interface AuthService {
