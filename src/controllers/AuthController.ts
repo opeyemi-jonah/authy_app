@@ -3,6 +3,9 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { UserService } from "../services/UserService"; // Service layer
 import { User } from "../entities/User";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const userService = new UserService();
 
@@ -65,7 +68,7 @@ export class AuthController {
       // Generate JWT token
       const token = jwt.sign(
         { email: user.email, role: user.role },
-        "your_jwt_secret", // Secret key (ideally stored in an env variable)
+        process.env.JWT_SECRET || "", // Secret key (ideally stored in an env variable)
         { expiresIn: "1h" } // Expiry time for the token
       );
 
