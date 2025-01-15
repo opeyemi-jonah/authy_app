@@ -4,6 +4,7 @@
   "description": "User authentication stand alone app",
   "main": "app.ts",
   "scripts": {
+    "dev": "nodemon src/app.ts",
     "start": "nodemon src/app.ts",
     "build": "tsc",
     "serve": "node dist/app.js"

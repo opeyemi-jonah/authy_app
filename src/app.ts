@@ -1,15 +1,21 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import AuthRoutes from './routes/AuthRoutes';
+import authRoutes from './modules/auth/routes';
+import userRoutes from './modules/user/routes';
+import { connectToMongoDB } from './core/database/connection';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-// Use body-parser to parse JSON request bodies
+// Middleware
 app.use(bodyParser.json());
 
-// Use the auth routes
-app.use('/auth', AuthRoutes); // Routes prefixed with /auth
+// Database connection
+connectToMongoDB();
+
+// Feature modules
+app.use('/auth', authRoutes);
+app.use('/user', userRoutes);
 
 // Start the server
 app.listen(port, () => {

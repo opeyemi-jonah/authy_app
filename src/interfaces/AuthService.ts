@@ -1,4 +1,4 @@
-import { User } from "../entities/User";
+import { User } from "../modules/user/entities/User";
 
 export interface AuthService {
   hashPassword(password: string): Promise<string>;

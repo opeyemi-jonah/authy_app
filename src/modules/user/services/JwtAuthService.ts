@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { AuthService } from "../interfaces/AuthService";
+import { AuthService } from "../../../interfaces/AuthService";
 import { User } from "../entities/User";
 
 export class JwtAuthService implements AuthService {

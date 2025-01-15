@@ -1,4 +1,4 @@
-import { MongoUserRepository } from "../frameworks/MongoUserRepository"; // MongoDB repo
+import { MongoUserRepository } from "../../user/services/MongoUserRepository"; // MongoDB repo
 import { User } from "../entities/User";
 
 const userRepository = new MongoUserRepository();

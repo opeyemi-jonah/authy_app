@@ -1,6 +1,6 @@
 // src/useCases/AuthenticateUser.ts
-import { UserRepository } from "../interfaces/UserRepository";
-import { AuthService } from "../interfaces/AuthService";
+import { UserRepository } from "../../../interfaces/UserRepository";
+import { AuthService } from "../../../interfaces/AuthService";
 
 export class AuthenticateUser {
   constructor(

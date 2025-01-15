@@ -1,7 +1,7 @@
-import { UserRepository } from "../interfaces/UserRepository";
+import { UserRepository } from "../../../interfaces/UserRepository";
 import { User } from "../entities/User";
-import { connectToMongoDB } from "./MongoDBClient"; // Import the connection function
 import { Db } from "mongodb";
+import { connectToMongoDB } from "../../../core/database/connection";
 
 export class MongoUserRepository implements UserRepository {
   private dbPromise: Promise<Db>;

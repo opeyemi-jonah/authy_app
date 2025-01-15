@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { UserService } from "../services/UserService"; // Service layer
-import { User } from "../entities/User";
+import { UserService } from "../../user/services/UserService"; // Service layer
+import { User } from "../../user/entities/User";
 import dotenv from 'dotenv';
 
 dotenv.config();
